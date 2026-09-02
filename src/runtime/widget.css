@@ -1,0 +1,107 @@
+.gis-day-collage {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  overflow: auto;
+  padding: 1rem;
+  color: #fff;
+  background: #1a1a2e;
+  background-image: radial-gradient(ellipse at 10% 20%, rgba(99, 102, 241, .15), transparent 50%), radial-gradient(ellipse at 80% 60%, rgba(236, 72, 153, .12), transparent 50%);
+}
+
+.collage-header {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: .75rem .5rem 0;
+  text-align: center;
+}
+
+.collage-header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.collage-intro {
+  margin: .65rem 0 .35rem;
+  color: rgba(255, 255, 255, .88);
+  line-height: 1.5;
+}
+
+.collage-subtitle {
+  margin: 0;
+  color: #e9c46a;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.collage-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: .7rem;
+  padding: 1rem .5rem 2rem;
+  perspective: 1000px;
+}
+
+.comment-card {
+  border: 0;
+  padding: 1.25rem 1.4rem;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .12);
+  animation: pop-in .45s ease both;
+  transition: transform .25s ease, filter .25s ease, box-shadow .25s ease;
+}
+
+.comment-card:hover,
+.comment-card:focus-visible {
+  transform: scale(1.06) rotate(0deg) translateY(-5px) !important;
+  filter: brightness(1.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, .4);
+  z-index: 2;
+}
+
+.card-rect { border-radius: 10px; }
+.card-rounded { border-radius: 22px; }
+.card-blob1 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+.card-blob2 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+.card-ticket { border-radius: 8px; border-left: 6px dashed rgba(255, 255, 255, .3); }
+.card-torn { border-radius: 4px 4px 20px 4px; }
+
+.comment-card.sm { width: clamp(120px, 15vw, 180px); font-size: .85rem; }
+.comment-card.md { width: clamp(180px, 22vw, 280px); font-size: 1rem; }
+.comment-card.lg { width: clamp(260px, 28vw, 380px); font-size: 1.05rem; }
+.comment-card.xl { width: clamp(280px, 34vw, 450px); font-size: 1.05rem; }
+
+.card-comment,
+.card-author,
+.card-organization { display: block; position: relative; }
+.card-comment { line-height: 1.5; margin-bottom: .8rem; }
+.card-author { font-size: .8rem; font-weight: 700; text-transform: uppercase; opacity: .9; }
+.card-organization { margin-top: .3rem; font-size: .75rem; font-weight: 700; font-style: italic; opacity: .75; }
+
+.empty { display: grid; place-items: center; min-height: 180px; text-align: center; opacity: .8; }
+.details-backdrop { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 1rem; background: rgba(0, 0, 0, .55); }
+.details { position: relative; width: min(100%, 520px); max-height: calc(100vh - 2rem); overflow: auto; padding: 1.5rem; color: #202124; background: #fff; border-radius: 8px; box-shadow: 0 20px 50px rgba(0, 0, 0, .35); }
+.details h2 { margin: 0 2rem 1rem 0; font-size: 1.625rem; }
+.details p { font-size: 18px; line-height: 1.55; }
+.close-button { position: absolute; top: .75rem; right: .75rem; border: 0; background: transparent; color: #202124; font-size: 1.4rem; cursor: pointer; }
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(.85) rotate(8deg); }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .gis-day-collage { padding: .5rem; }
+  .comment-card.sm,
+  .comment-card.md,
+  .comment-card.lg,
+  .comment-card.xl { width: min(100%, 320px); }
+}

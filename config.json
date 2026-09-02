@@ -1,0 +1,12 @@
+{
+  "title": "GIS Day Comment Collage",
+  "subtitle": "Celebrating the technology that connects people, places, and data. Every pin on a map tells a story - here are yours.",
+  "note": "Click any comment card to see full details",
+  "commentField": "i_use_gis_to",
+  "commentField2": "gis_helped_me_by",
+  "nameField": "name",
+  "organizationField": "division",
+  "organizationOtherField": "division_other",
+  "dateField": "created_date",
+  "maxComments": 200
+}

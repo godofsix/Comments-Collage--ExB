@@ -1,0 +1,17 @@
+{
+  "name": "collage",
+  "label": "Comments Collage",
+  "type": "widget",
+  "version": "1.0.0",
+  "exbVersion": "1.13.0",
+  "author": "Bidemi Adejumo",
+  "description": "Displays Survey123 comments as an interactive collage.",
+  "thumbnail": "icon.svg",
+  "copyright": "",
+  "license": "",
+  "properties": {
+    "canStyle": true,
+    "canResize": true,
+    "hasSettingPage": true
+  }
+}
