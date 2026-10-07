@@ -4,11 +4,11 @@ Displays comments from a Feature Layer as an interactive, randomized card collag
 
 ## Install
 
-Place this folder in the Experience Builder Developer Edition widget directory:
+Place the collage folder in the Experience Builder Developer Edition widget directory:
 
 `client/your-extensions/widgets/collage`
 
-Build custom widgets from the Experience Builder `client` folder:
+Build custom widgets from the Experience Builder `client` folder using the src folder which is the source code:
 
 ```powershell
 npm run build:dev
